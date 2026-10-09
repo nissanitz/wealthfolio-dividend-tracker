@@ -71,7 +71,7 @@ breakdown.
 | `network.request` (`query1.finance.yahoo.com`) | Fetch external per-share dividend history for the indicated yield and forward projection. |
 
 The addon stores no data of its own and sends nothing anywhere except the
-read-only Yahoo requests above.
+read-only Yahoo requests above. See [PRIVACY.md](PRIVACY.md) for details.
 
 ---
 
