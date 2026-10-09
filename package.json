@@ -1,0 +1,61 @@
+{
+  "name": "wealthfolio-dividend-tracker",
+  "version": "1.0.0",
+  "description": "A comprehensive dividend income dashboard for Wealthfolio: yields, growth, forward projections, taxes and diversification.",
+  "type": "module",
+  "main": "dist/addon.js",
+  "author": "Nissan Itzhakov",
+  "license": "MIT",
+  "homepage": "https://github.com/nissanitz/wealthfolio-dividend-tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nissanitz/wealthfolio-dividend-tracker.git"
+  },
+  "keywords": [
+    "wealthfolio",
+    "addon",
+    "dividends",
+    "income",
+    "yield",
+    "passive-income",
+    "analytics"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rm -rf dist",
+    "package": "rm -f dividend-tracker-addon.zip && zip -q dividend-tracker-addon.zip manifest.json dist/addon.js README.md LICENSE",
+    "bundle": "npm run clean && npm run build && npm run package",
+    "type-check": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "files": [
+    "dist/",
+    "manifest.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.90.0",
+    "@wealthfolio/addon-sdk": "^3.9.0",
+    "@wealthfolio/ui": "^3.9.0",
+    "date-fns": "^4.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.7.0"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.90.20",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.2",
+    "@wealthfolio/addon-sdk": "^3.9.0",
+    "@wealthfolio/ui": "^3.9.0",
+    "date-fns": "^4.1.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "recharts": "^3.7.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}

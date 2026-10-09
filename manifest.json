@@ -1,0 +1,80 @@
+{
+  "id": "dividend-tracker",
+  "name": "Dividend Tracker",
+  "version": "1.0.0",
+  "description": "A comprehensive dividend income dashboard: monthly income, growth, forward projections, yield-on-cost and diversification, in the Wealthfolio design language.",
+  "author": "Nissan Itzhakov",
+  "homepage": "https://github.com/nissanitz/wealthfolio-dividend-tracker",
+  "repository": "https://github.com/nissanitz/wealthfolio-dividend-tracker",
+  "main": "dist/addon.js",
+  "sdkVersion": "3.9.0",
+  "minWealthfolioVersion": "3.9.0",
+  "enabled": true,
+  "contributes": {
+    "routes": [{ "id": "dividend-tracker" }],
+    "links": {
+      "sidebar": [
+        {
+          "id": "dividend-tracker",
+          "route": "dividend-tracker",
+          "label": "Dividend Tracker",
+          "icon": "hand-coins",
+          "order": 155
+        }
+      ]
+    }
+  },
+  "hostDependencies": {
+    "@tanstack/react-query": "^5.90.0",
+    "@wealthfolio/addon-sdk": "^3.9.0",
+    "@wealthfolio/ui": "^3.9.0",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.561.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.7.0"
+  },
+  "permissions": [
+    {
+      "category": "accounts",
+      "functions": ["getAll"],
+      "purpose": "List accounts so holdings can be grouped and valued"
+    },
+    {
+      "category": "portfolio",
+      "functions": ["getHoldings", "getIncomeSummary"],
+      "purpose": "Read holdings and the income summary to compute dividend income, yields, growth and projections"
+    },
+    {
+      "category": "activities",
+      "functions": ["search"],
+      "purpose": "Read dividend activities to compute accurate trailing 12-month income and per-holding yields"
+    },
+    {
+      "category": "currency",
+      "functions": ["getRatesForDates"],
+      "purpose": "Convert non-base-currency dividends to the portfolio base currency at each payment date"
+    },
+    {
+      "category": "market-data",
+      "functions": ["searchTicker"],
+      "purpose": "Resolve ticker symbols to provider symbols when building the external dividend source"
+    },
+    {
+      "category": "assets",
+      "functions": ["getProfile"],
+      "purpose": "Read asset provider configuration to resolve the exact Yahoo ticker (e.g. EMCL.NE)"
+    },
+    {
+      "category": "network",
+      "functions": ["request"],
+      "purpose": "Fetch per-share dividend history from query1.finance.yahoo.com to compute indicated yield and forward payments"
+    }
+  ],
+  "network": {
+    "allowedHosts": ["query1.finance.yahoo.com"],
+    "approvedHosts": ["query1.finance.yahoo.com"]
+  },
+  "keywords": ["wealthfolio", "addon", "dividends", "income", "yield"],
+  "license": "MIT"
+}
