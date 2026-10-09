@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in improving the Dividend Tracker addon!
+Thanks for your interest in improving the Dividend Dashboard addon!
 
 ## Reporting issues
 
@@ -20,7 +20,7 @@ npm install
 npm run dev        # rebuild on change (vite build --watch)
 npm run type-check # tsc --noEmit
 npm run build      # bundle -> dist/addon.js
-npm run bundle     # clean + build + zip -> dividend-tracker-addon.zip
+npm run bundle     # clean + build + zip -> dividend-dashboard.zip
 ```
 
 To try a build inside Wealthfolio, install the generated zip via

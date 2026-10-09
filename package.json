@@ -1,6 +1,6 @@
 {
   "name": "wealthfolio-dividend-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive dividend income dashboard for Wealthfolio: yields, growth, forward projections, taxes and diversification.",
   "type": "module",
   "main": "dist/addon.js",
@@ -24,7 +24,7 @@
     "build": "vite build",
     "dev": "vite build --watch",
     "clean": "rm -rf dist",
-    "package": "rm -f dividend-tracker-addon.zip && zip -q dividend-tracker-addon.zip manifest.json dist/addon.js README.md LICENSE",
+    "package": "rm -f dividend-dashboard.zip && zip -q dividend-dashboard.zip manifest.json dist/addon.js README.md LICENSE",
     "bundle": "npm run clean && npm run build && npm run package",
     "type-check": "tsc --noEmit",
     "lint": "tsc --noEmit"

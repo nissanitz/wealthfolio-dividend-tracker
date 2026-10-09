@@ -1,7 +1,7 @@
 {
-  "id": "dividend-tracker",
-  "name": "Dividend Tracker",
-  "version": "1.0.0",
+  "id": "dividend-dashboard",
+  "name": "Dividend Dashboard",
+  "version": "1.0.1",
   "description": "A comprehensive dividend income dashboard: monthly income, growth, forward projections, yield-on-cost and diversification, in the Wealthfolio design language.",
   "author": "Nissan Itzhakov",
   "homepage": "https://github.com/nissanitz/wealthfolio-dividend-tracker",
@@ -11,13 +11,13 @@
   "minWealthfolioVersion": "3.9.0",
   "enabled": true,
   "contributes": {
-    "routes": [{ "id": "dividend-tracker" }],
+    "routes": [{ "id": "dividend-dashboard" }],
     "links": {
       "sidebar": [
         {
-          "id": "dividend-tracker",
-          "route": "dividend-tracker",
-          "label": "Dividend Tracker",
+          "id": "dividend-dashboard",
+          "route": "dividend-dashboard",
+          "label": "Dividend Dashboard",
           "icon": "hand-coins",
           "order": 155
         }

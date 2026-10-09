@@ -1,4 +1,4 @@
-# Dividend Tracker for Wealthfolio
+# Dividend Dashboard for Wealthfolio
 
 A [Wealthfolio](https://wealthfolio.app) addon that turns your portfolio into a
 dividend-income dashboard: what you receive, what it yields, how it is growing,
@@ -39,7 +39,7 @@ design language.
 
 Requires **Wealthfolio 3.9.0 or newer**.
 
-1. Download the latest `dividend-tracker-addon.zip` from
+1. Download the latest `dividend-dashboard.zip` from
    [Releases](../../releases/latest).
 2. Open Wealthfolio → **Settings → Addons → Install from file**.
 3. Select the downloaded zip and approve the permissions.
@@ -52,7 +52,7 @@ works and falls back to a trailing-12-month estimate.
 
 ## Usage
 
-Open **Dividend Tracker** in the Wealthfolio sidebar. Each panel has its own
+Open **Dividend Dashboard** in the Wealthfolio sidebar. Each panel has its own
 range and grouping controls; hovering a bar or donut slice shows a per-holding
 breakdown.
 
@@ -112,7 +112,7 @@ read-only Yahoo requests above.
 npm install
 npm run build      # bundle -> dist/addon.js
 npm run type-check # tsc --noEmit
-npm run bundle     # clean + build + zip -> dividend-tracker-addon.zip
+npm run bundle     # clean + build + zip -> dividend-dashboard.zip
 ```
 
 Install the generated zip via **Settings → Addons → Install from file**.

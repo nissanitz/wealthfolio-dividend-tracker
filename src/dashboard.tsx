@@ -43,7 +43,7 @@ export function DividendDashboard({ ctx }: { ctx: AddonContext }) {
   return (
     <Page className="min-h-screen">
       <PageHeader
-        heading="Dividend Tracker"
+        heading="Dividend Dashboard"
         text="Passive income, growth and forward projections across your holdings"
         actions={
           <Button

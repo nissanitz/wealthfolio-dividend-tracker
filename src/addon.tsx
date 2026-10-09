@@ -14,12 +14,12 @@ const DividendRoute = () => (
 
 const enable: AddonEnableFunction = (ctx) => {
   addonCtx = ctx;
-  ctx.api.logger.info("Dividend Tracker addon is being enabled");
+  ctx.api.logger.info("Dividend Dashboard addon is being enabled");
 
   // Route id MUST match `contributes.routes[].id` in manifest.json.
   ctx.router.add({
-    id: "dividend-tracker",
-    path: "/addons/dividend-tracker",
+    id: "dividend-dashboard",
+    path: "/addons/dividend-dashboard",
     component: DividendRoute,
   });
 
